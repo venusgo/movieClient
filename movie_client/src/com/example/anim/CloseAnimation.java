@@ -5,14 +5,15 @@ import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
 import android.widget.FrameLayout.LayoutParams;
+import android.widget.RelativeLayout;
 
 public class CloseAnimation extends TranslateAnimation implements
 		TranslateAnimation.AnimationListener {
 
-	private LinearLayout mainLayout;
+	private RelativeLayout mainLayout;
 	int panelWidth;
 
-	public CloseAnimation(LinearLayout layout, int width, int fromXType,
+	public CloseAnimation(RelativeLayout layout, int width, int fromXType,
 			float fromXValue, int toXType, float toXValue, int fromYType,
 			float fromYValue, int toYType, float toYValue) {
 

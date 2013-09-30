@@ -13,6 +13,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.anim.CloseAnimation;
@@ -22,7 +23,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	/* slide menu */
 	private DisplayMetrics metrics;
-	private LinearLayout ll_mainLayout;
+	private RelativeLayout ll_mainLayout;
 	private LinearLayout ll_menuLayout;
 	private FrameLayout.LayoutParams leftMenuLayoutPrams;
 	private int leftMenuWidth;
@@ -46,7 +47,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		leftMenuWidth = (int) ((metrics.widthPixels) * 0.75);
 
 		// init main view
-		ll_mainLayout = (LinearLayout) findViewById(R.id.ll_mainlayout);
+		ll_mainLayout = (RelativeLayout) findViewById(R.id.ll_mainlayout);
 
 		// init left menu
 		ll_menuLayout = (LinearLayout) findViewById(R.id.ll_menuLayout);
@@ -70,7 +71,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 
 	/**
-	 * left menu toggle
+	 * left menu toggle 
 	 */
 	private void menuLeftSlideAnimationToggle() {
 
@@ -124,12 +125,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 	}
 
-	/**
-	 * 뷰의 동작을 제어한다. 하위 모든 뷰들이 enable 값으로 설정된다.
-	 * 
-	 * @param viewGroup
-	 * @param enabled
-	 */
 	public static void enableDisableViewGroup(ViewGroup viewGroup,
 			boolean enabled) {
 		int childCount = viewGroup.getChildCount();
