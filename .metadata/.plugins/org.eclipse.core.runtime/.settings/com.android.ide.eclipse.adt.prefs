@@ -1,4 +1,5 @@
 com.android.ide.eclipse.adt.fixLegacyEditors=1
 com.android.ide.eclipse.adt.sdk=C\:\\app-development\\android-sdk-windows
 com.android.ide.eclipse.adt.xmlEditor=true
+design.structure.flyout.width=232
 eclipse.preferences.version=1

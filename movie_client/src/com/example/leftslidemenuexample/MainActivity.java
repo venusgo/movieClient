@@ -12,6 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Gallery;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -25,6 +26,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private DisplayMetrics metrics;
 	private RelativeLayout ll_mainLayout;
 	private LinearLayout ll_menuLayout;
+	private Gallery gallery;             //
 	private FrameLayout.LayoutParams leftMenuLayoutPrams;
 	private int leftMenuWidth;
 	private static boolean isLeftExpanded;
@@ -34,8 +36,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
 		initSildeMenu();
+				
 
 	}
 
@@ -48,6 +50,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		// init main view
 		ll_mainLayout = (RelativeLayout) findViewById(R.id.ll_mainlayout);
+		gallery = (Gallery) findViewById(R.id.gallery);
 
 		// init left menu
 		ll_menuLayout = (LinearLayout) findViewById(R.id.ll_menuLayout);
